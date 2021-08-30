@@ -1,0 +1,66 @@
+@font-face {
+  font-family: "Fugaz One";
+  font-weight: 400;
+  src: url("/fonts/FugazOne-Regular.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: "Source Sans Pro";
+  font-weight: 600;
+  src: url("/fonts/SourceSansPro-SemiBold.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: "Source Sans Pro";
+  font-weight: 400;
+  src: url("/fonts/SourceSansPro-Regular.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: "PressStart2PRegular";
+  font-weight: 400;
+  src: url("/fonts/PressStart2P-Regular.ttf") format("truetype");
+}
+
+.imgPreview{
+  width: 250px;
+  height: 250px;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+.imgPreview input[type='file'] {
+  display: none;
+}
+
+.imgPreview .customFileUpload{
+  border: 1px solid;
+  border-radius: 15px;
+  border-color: #4D4456;
+  font-size: 22px;
+  font-weight: 500;
+  margin: 1%;
+  padding: 1%;
+  cursor: pointer;
+}
+
+::-webkit-scrollbar {
+  width: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: rgb(53, 50, 58);
+  opacity: 0.1;
+}
+
+::-webkit-scrollbar-thumb {
+  background:rgb(110, 101, 122);
+  opacity: 1.0;
+  border-radius: 15px;
+  max-height: 10px;
+
+}
