@@ -10,6 +10,19 @@ import {
 } from "@chakra-ui/core";
 import styled from "styled-components";
 
+const Card = styled(Flex)`
+  box-shadow: 0px 2px 12px -8px rgba(25, 19, 38, 0.1),
+    0px 1px 1px rgba(25, 19, 38, 0.05);
+  border-radius: 32px;
+  display: flex;
+  box-shadow: ${({ isActive }) =>
+    isActive
+      ? "0px 0px 0px 1px #0098A1, 0px 0px 4px 8px rgba(31, 199, 212, 0.4);"
+      : "0px 2px 12px -8px rgba(25, 19, 38, 0.1), 0px 1px 1px rgba(25, 19, 38, 0.05)"};
+  flex-direction: column;
+  position: relative;
+`;
+
 const StyledBox = styled(Box)`
   :hover {
     background-color: #651ab2;
@@ -49,51 +62,52 @@ export default function Vaults() {
             <SimpleGrid spacing="2rem" minChildWidth="15rem" w="100%">
               {discovers.map((item, index) => {
                 return (
-                  <StyledBox
-                    p="1rem 1.5rem"
-                    // bg={index === 0 ? "#651AB2" : "#26212A"}
-                    borderRadius="10px"
-                    border="1px solid #651AB2"
-                    key={index}
-                    className="Box"
-                  >
-                    <div className="Box">
-                      <Flex
-                        flexDirection="row"
-                        mt="0.2rem"
-                        justifyContent="center"
-                      >
-                        <Box>
-                          <Text fontSize="16px" fontWeight="500">
-                            {item.name}{" "}
+                  <Card>
+                    <StyledBox
+                      p="1rem 1.5rem"
+                      // bg={index === 0 ? "#651AB2" : "#26212A"}
+                      borderRadius="10px"
+                      border="1px solid #651AB2"
+                      key={index}
+                      className="Box"
+                    >
+                      <div className="Box">
+                        <Flex
+                          flexDirection="row"
+                          mt="0.2rem"
+                          justifyContent="center"
+                        >
+                          <Box>
+                            <Text fontSize="16px" fontWeight="500">
+                              {item.name}{" "}
+                            </Text>
+                          </Box>
+                        </Flex>
+                        <Image
+                          src={"/images/vaults/" + item.image}
+                          w="20rem"
+                          h="15rem"
+                          justify="center"
+                          marginTop="1rem"
+                        />
+                        <Flex
+                          flexDirection="row"
+                          mt="0.5rem"
+                          justifyContent="center"
+                        >
+                          <Text fontSize="12px">
+                            {" "}
+                            Stake {item.name} and earn $FIGGY{" "}
                           </Text>
-                        </Box>
-                      </Flex>
-                      <Image
-                        src={"/images/vaults/" + item.image}
-                        w="20rem"
-                        h="15rem"
-                        justify="center"
-                        marginTop="1rem"
-                      />
-                      <Flex
-                        flexDirection="row"
-                        mt="0.5rem"
-                        justifyContent="center"
-                      >
-                        <Text fontSize="12px">
-                          {" "}
-                          Stake {item.name} and earn $FIGGY{" "}
-                        </Text>
-                      </Flex>
-                      <Flex
-                        flexDirection="column"
-                        mt="0.5rem"
-                        justifyContent="center"
-                      >
-                        <Text fontSize="10px">$FIGGY earned</Text>
-                      </Flex>
-                      {/* <StyledCardActions>
+                        </Flex>
+                        <Flex
+                          flexDirection="column"
+                          mt="0.5rem"
+                          justifyContent="center"
+                        >
+                          <Text fontSize="10px">$FIGGY earned</Text>
+                        </Flex>
+                        {/* <StyledCardActions>
                         {!account && (
                           <UnlockButton>Approve Contract</UnlockButton>
                         )}
@@ -140,20 +154,21 @@ export default function Vaults() {
                           ))}
                       </StyledCardActions> */}
 
-                      <Flex
-                        flexDirection="row"
-                        mt="0.5rem"
-                        justifyContent="center"
-                        marginTop="2rem"
-                      >
-                        <Button marginRight="4rem" minWidth="5rem">
-                          Stake
-                        </Button>
-                        <Button marginRight="0.5rem">-</Button>
-                        <Button marginLeft="0.5rem">+</Button>
-                      </Flex>
-                    </div>
-                  </StyledBox>
+                        <Flex
+                          flexDirection="row"
+                          mt="0.5rem"
+                          justifyContent="center"
+                          marginTop="2rem"
+                        >
+                          <Button marginRight="4rem" minWidth="5rem">
+                            Stake
+                          </Button>
+                          <Button marginRight="0.5rem">-</Button>
+                          <Button marginLeft="0.5rem">+</Button>
+                        </Flex>
+                      </div>
+                    </StyledBox>
+                  </Card>
                 );
               })}
             </SimpleGrid>
