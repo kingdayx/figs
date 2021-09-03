@@ -28,19 +28,7 @@ const Footer = () => {
               issue and sell custom crypto assets that represent ownership in
               their digital work.
             </Text>
-            <Text fontSize="16px" maxW="20rem">
-              NFT’s are unique in nature in which all NFT’s can be verified on a
-              blockchain, NFT’s can offer permanent information where it stores
-              it all on the tokens. This can range from text, image, music,
-              signature, or anything else. It offers us incredible programming
-              capabilities since the NFT is a piece of code on a blockchain,
-              bulti-in royalties can be incorporated allowing artists to collect
-              revenue. NFT offer individual digital ownership where the NFT
-              itself resides in the digital wallets of the individual, thus one
-              has complete ownership. Being built on networks such as Etheruem,
-              this grants permissionless NFT where they can be programmed to
-              have various qualities.
-            </Text>
+
             <Flex flexDirection="row" mt="3rem">
               <Box cursor="pointer" mr="1rem">
                 <Image src="/images/footer/facebook.svg" />
