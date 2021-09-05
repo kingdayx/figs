@@ -37,11 +37,6 @@ const Header = () => {
             </Flex>
           </Box>
           <Flex flexDirection="row" m="auto 0 auto auto">
-            <Link m="auto 0" _active={{}} href="/about" _focus={{}}>
-              <Text mr="1.5rem" fontWeight="600" fontSize="14px">
-                About
-              </Text>
-            </Link>
             <Link m="auto 0" _active={{}} href="/edit" _focus={{}}>
               <Text mr="1.5rem" fontWeight="600" fontSize="14px">
                 Profile
@@ -52,7 +47,7 @@ const Header = () => {
                 Market
               </Text>
             </Link>
-            <Link m="auto 0" _active={{}} _focus={{}}>
+            <Link m="auto 0" href="/" _active={{}} _focus={{}}>
               <Text mr="1.5rem" fontWeight="600" fontSize="14px">
                 Discover
               </Text>
